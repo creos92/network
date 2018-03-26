@@ -1,26 +1,27 @@
 Da linea di comando:
 Lato server:
 su root 
-svn checkout https://github.com/creos92/parloma.git/trunk/DockerfileServer
-cd Dockerfile_Server/
-docker build . -t parloma:server
+svn checkout https://github.com/creos92/network.git/trunk/DockerfileServer
+cd DockerfileServer/
+docker build . -t server
 docker-compose up
 
 Lato Client:
 INPUT MODULE:
 su root
-svn checkout https://github.com/creos92/parloma.git/trunk/Dockerfile_Client_Input
-cd Dockerfile_Client_Input/
-docker build . -t parloma:client_in
-docker-compose run -e IP=34.244.15.238 parloma_client_in
+svn checkout https://github.com/creos92/network.git/trunk/Dockerfile_Client_1
+cd Dockerfile_Client_1/
+docker build . -t client_1
+docker-compose run -e IP=34.244.15.238 client_1
 
 
 OUTPUT MODULE:
+
 su root
-svn checkout https://github.com/creos92/parloma.git/trunk/Dockerfile_Client_Output
-cd Dockerfile_Client_Out/
-docker build -t parloma:client_out
-docker-compose run -e IP=34.244.15.238 parloma_client_out
+svn checkout https://github.com/creos92/network.git/trunk/Dockerfile_Client_2
+cd Dockerfile_Client_2/
+docker build . -t client_2
+docker-compose run -e IP=34.244.15.238 client_2
 
 
 Altro:
