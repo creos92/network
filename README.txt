@@ -11,7 +11,7 @@ INPUT MODULE:
 su root
 svn checkout https://github.com/creos92/network.git/trunk/Dockerfile_Client_1
 cd Dockerfile_Client_1/
-docker build . -t client_1
+docker build . -t client
 docker-compose run -e IP=34.244.15.238 client_1
 
 
@@ -20,7 +20,7 @@ OUTPUT MODULE:
 su root
 svn checkout https://github.com/creos92/network.git/trunk/Dockerfile_Client_2
 cd Dockerfile_Client_2/
-docker build . -t client_2
+docker build . -t client
 docker-compose run -e IP=34.244.15.238 client_2
 
 
