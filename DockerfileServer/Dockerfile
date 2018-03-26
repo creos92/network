@@ -9,4 +9,4 @@ RUN \
  sudo tar zxvf openvpn-2.4.4.tar.gz &&\
  cd openvpn-2.4.4 && ./configure && make && checkinstall -y
 
-CMD chmod +rx start_s.sh && sync && ./start_s.sh
+CMD cd Server && chmod +rx start_s.sh && sync && ./start_s.sh
