@@ -2,5 +2,6 @@ client_instance:
   image: client
   stdin_open: true
   tty: true
+  privileged: true
 
 
