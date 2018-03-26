@@ -1,5 +1,5 @@
 client_1:
-  image: client
+  image: client1
   stdin_open: true
   tty: true
   privileged: true
